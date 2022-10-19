@@ -12,7 +12,7 @@ const Other = (props) => {
 
     useEffect(() => {
         const getTickets = async () => {
-            const {data: res} = await axios.get('http://localhost:8000/api/lottery-tickets');
+            const {data: res} = await axios.get('/api/lottery-tickets');
             setTicket(res.ticket);
         }
         trackPromise(getTickets());

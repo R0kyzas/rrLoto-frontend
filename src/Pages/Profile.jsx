@@ -12,7 +12,7 @@ const Profile = (props) => {
 
     const getToken = localStorage.getItem('userToken');
     
-    const TICKET_URL = `http://localhost:8000/api/ticket-list/${getToken}`;
+    const TICKET_URL = `/api/ticket-list/${getToken}`;
     
     const [data, setData] = useState({});
 

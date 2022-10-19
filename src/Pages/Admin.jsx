@@ -21,14 +21,14 @@ const Admin = () => {
             navigate('/login');
         }
         const getData = async () => {
-            const {data: res} = await axios.get('http://localhost:8000/api/admin');
+            const {data: res} = await axios.get('/api/admin');
             setData(res);
         }
         getData();
     }, [msg])
     
     const handleAccept = async (data) => {
-        await axios.post(`http://localhost:8000/api/admin/confirm/${data}`)
+        await axios.post(`/api/admin/confirm/${data}`)
         .then((res) => {
             setMsg(res.data.success)
         })

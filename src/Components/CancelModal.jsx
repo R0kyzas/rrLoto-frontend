@@ -15,7 +15,7 @@ const CancelModal = ({showCancelModal, setShowCancelModal, orderId, setMsg}) => 
     });
 
     const onSubmit = async (data) => {
-        await axios.post(`http://localhost:8000/api/admin/cancel/${orderId}`, data)
+        await axios.post(`/api/admin/cancel/${orderId}`, data)
         .then((res) => {
             setMsg(res.data.success);
             setShowCancelModal(false);

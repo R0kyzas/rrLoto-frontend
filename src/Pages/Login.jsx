@@ -33,7 +33,7 @@ const Login = (props) => {
     });
 
     const postUserData = async (data) => {
-        await axios.post('http://localhost:8000/api/login',data)
+        await axios.post('/api/login',data)
         .then((res) => {
             if(res.status === 200)
             {
