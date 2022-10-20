@@ -21,7 +21,7 @@ const Admin = () => {
             navigate('/login');
         }
         const getData = async () => {
-            const {data: res} = await axios.get('/api/admin');
+            const {data: res} = await axios.get('https://jellyfish-app-nxtf7.ondigitalocean.app:8080/app/api/admin');
             setData(res);
         }
         getData();
@@ -42,7 +42,8 @@ const Admin = () => {
 
     const handleClick = async() => {
         
-        // await axios.post(`http://localhost:8000/api/admin/get-winner`)
+        // await axios.post(`http://localhost:8000/api/admin/get-winner`) https://jellyfish-app-nxtf7.ondigitalocean.app/ 
+        
         // .then((res) => {
         //     setMsg(res.data.success)
         // })

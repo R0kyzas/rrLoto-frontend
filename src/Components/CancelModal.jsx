@@ -15,7 +15,7 @@ const CancelModal = ({showCancelModal, setShowCancelModal, orderId, setMsg}) => 
     });
 
     const onSubmit = async (data) => {
-        await axios.post(`/api/admin/cancel/${orderId}`, data)
+        await axios.post(`https://jellyfish-app-nxtf7.ondigitalocean.app:8080/app/api/admin/cancel/${orderId}`, data)
         .then((res) => {
             setMsg(res.data.success);
             setShowCancelModal(false);

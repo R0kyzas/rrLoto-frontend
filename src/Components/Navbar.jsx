@@ -3,7 +3,6 @@ import { BsHouseDoor } from "react-icons/bs";
 import { NavLink } from 'react-router-dom';
 import { BsChatLeftDots } from "react-icons/bs";
 import { BsPersonBoundingBox } from "react-icons/bs";
-import { BsFileCheck } from "react-icons/bs";
 
 const Navbar = () => {
     let activeStyle = 'active';

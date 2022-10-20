@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from '../api/axios';
+import axios from 'axios';
 import Modal from '../Components/Modal';
 import { useForm } from 'react-hook-form';
 import Cookies from 'universal-cookie';
@@ -23,7 +23,7 @@ const Home = (props) => {
         if(!localStorage.getItem('userToken'))
         {
             const getTokens = async () => {
-                const {data: res} = await axios.get('/token');
+                const {data: res} = await axios.get('https://jellyfish-app-nxtf7.ondigitalocean.app:8080/app/api/token');
                 localStorage.setItem('userToken', res.token);
             };
             trackPromise(getTokens());

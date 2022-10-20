@@ -12,7 +12,7 @@ const Other = (props) => {
 
     useEffect(() => {
         const getTickets = async () => {
-            const {data: res} = await axios.get('/api/lottery-tickets');
+            const {data: res} = await axios.get('https://jellyfish-app-nxtf7.ondigitalocean.app:8080/app/api/lottery-tickets');
             setTicket(res.ticket);
         }
         trackPromise(getTickets());

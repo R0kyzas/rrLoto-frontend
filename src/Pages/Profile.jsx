@@ -12,7 +12,7 @@ const Profile = (props) => {
 
     const getToken = localStorage.getItem('userToken');
     
-    const TICKET_URL = `/api/ticket-list/${getToken}`;
+    const TICKET_URL = `https://jellyfish-app-nxtf7.ondigitalocean.app:8080/app/api/ticket-list/${getToken}`;
     
     const [data, setData] = useState({});
 
