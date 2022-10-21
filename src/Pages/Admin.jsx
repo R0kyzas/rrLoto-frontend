@@ -28,7 +28,7 @@ const Admin = () => {
     }, [msg])
     
     const handleAccept = async (data) => {
-        await axios.post(`/api/admin/confirm/${data}`)
+        await axios.post(`http://139.59.202.149:90/api/admin/confirm/${data}`)
         .then((res) => {
             setMsg(res.data.success)
         })
