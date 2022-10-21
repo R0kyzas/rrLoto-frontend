@@ -21,7 +21,7 @@ const Admin = () => {
             navigate('/login');
         }
         const getData = async () => {
-            const {data: res} = await axios.get('https://jellyfish-app-nxtf7.ondigitalocean.app:8080/app/api/admin');
+            const {data: res} = await axios.get('http://139.59.202.149:90/api/admin');
             setData(res);
         }
         getData();
