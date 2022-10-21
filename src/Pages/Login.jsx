@@ -33,7 +33,7 @@ const Login = (props) => {
     });
 
     const postUserData = async (data) => {
-        await axios.post('https://jellyfish-app-nxtf7.ondigitalocean.app:8080/app/api/login',data)
+        await axios.post('http://139.59.202.149:90/api/login',data)
         .then((res) => {
             if(res.status === 200)
             {
