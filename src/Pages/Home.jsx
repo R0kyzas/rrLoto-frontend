@@ -48,7 +48,7 @@ const Home = (props) => {
     });
 
     const postTicketData = async (data) => {
-        await axios.post(TICKET_URL, data)
+        await axios.post('http://139.59.202.149:90/api/ticket', data)
         .then((res) => {
             setPostMessage(res.data.success);
         })
