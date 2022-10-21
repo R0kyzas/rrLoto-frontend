@@ -23,7 +23,7 @@ const Home = (props) => {
         if(!localStorage.getItem('userToken'))
         {
             const getTokens = async () => {
-                const {data: res} = await axios.get('https://jellyfish-app-nxtf7.ondigitalocean.app:8080/app/api/token');
+                const {data: res} = await axios.get('http://139.59.202.149:90/api/token');
                 localStorage.setItem('userToken', res.token);
             };
             trackPromise(getTokens());
